@@ -1,0 +1,117 @@
+// ----------------------------------------------------------------- //
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
+    int num1, num1, modulo;
+    System.out.print("Ingrese el primer numero: ");
+    num1 = entrada.nextInt();
+    System.out.print("Ingrese el segundo numero: ");
+    num2 = entrada.nextInt();
+    modulo = num1%num2;
+    if(modulo == 0)
+    {
+      System.out.println("El primer numero SI es divisible entre el segundo");
+    }
+    else
+    {
+      System.out.println("El primer numero NO es divisible entre el segundo");
+    }
+  }
+}
+// ----------------------------------------------------------------- //
+
+
+
+
+
+
+// ----------------------------------------------------------------- //
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    float[] notas;
+    int notamay=0, notamen=0;
+     notas = new float[10] ;
+    Scanner teclado = new Scanner(System.in);
+    for(int i=0; i< notas.length;i++)
+    {
+      System.out.print("Ingrese la nota #"+i+": ");
+      notas[i] = teclado.nextFloat();
+      if(notas[i]>=7)
+      {
+        notamay++;
+      }
+      else
+      {
+        notamen++;
+      }
+    }
+    for(int j=0; j<notas.length;j++)
+    {
+      System.out.println("Nota: "+notas[j]);
+    }
+    System.out.println("Numero de notas mayores a la necesaria para aprobar (7): "+Notamayores);
+    System.out.println("Numero de notas menores a la necesaria para aprobar (7): "+Notamenor);
+  }
+}
+// ----------------------------------------------------------------- //
+
+
+
+
+// ----------------------------------------------------------------- //
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+    int cantpuntos=0;
+    int primer=0, segundo=0, tercer=0,cuarto=0;
+    Scanner teclado = new Scanner(System.in);
+    System.out.print("Ingrese la cantidad de puntos a evaluar:  ");
+    cantpuntos = teclado.nextInt();
+    int[] x = new int[cantpuntos];
+    int[] y = new int[cantpuntos];
+    for(int i=0; i<=cantpuntos-1; i++)
+    {
+      System.out.println("-----------------------------------------");
+      System.out.println(" ");
+      System.out.println("--- Punto Numero: "+(i+1)+" ---");
+      System.out.println(" ");
+      System.out.println("-----------------------------------------");
+      System.out.print("Ingrese Cordenada X: ");
+      x[i] = teclado.nextInt();
+      System.out.print("Ingrese Cordenada Y: ");
+      y[i] = teclado.nextInt();
+      if(x[i]>0 && y[i]>0)
+      {
+        primer++;
+      }else if(x[i]<0 && y[i]>0)
+      {
+        segundo++;
+      }else if(x[i]<0 && y[i]<0)
+      {
+        tercer++;
+      }else if(x[i]>0 && y[i]<0)
+      {
+        cuarto++;
+      }
+      
+    }
+    System.out.println("-----------------------------------------");
+    System.out.println("--- Puntos Ingresados ---");
+    System.out.println("-----------------------------------------");
+    for(int j=0; j<=cantpuntos-1;j++)
+    {
+      System.out.println("( "+x[j]+" , "+ y[j]+" )");
+    }
+    System.out.println(" ");
+    System.out.println("Puntos ubicados en el primer octante: "+primer);
+    System.out.println("Puntos ubicados en el segundo octante: "+segundo);
+    System.out.println("Puntos ubicados en el tercer octante: "+tercer);
+    System.out.println("Puntos ubicados en el cuarto octante: "+cuarto);
+
+  }
+}
+// ----------------------------------------------------------------- //
